@@ -1,3 +1,14 @@
+This is a fork of xyz.
+
+Install instrcutions
+
+PRs welcome!
+Wishlist:
+- Allowlist for specific urls not to close
+
+NB(avi): I don't have Asana github access yet so this is just in my personal Github for now.
+When I get access, I'll plan to copy the project over so it's more maintainable.
+
 # meetings-page-auto-closer-for-zoom
 
 Automatically closes the page used to launch Zoom meetings and restores focus to the tab you were on beforehand. Supports pages launched by Zoom and ZoomGov. Easily change the countdown time by clicking one of the offered alternate times in blue.
