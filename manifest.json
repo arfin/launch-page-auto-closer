@@ -1,9 +1,8 @@
 {
-  "name": "Meetings Page Auto Closer for Zoom",
-  "description": "Automatically closes the page opened by Zoom to launch meetings and restores focus to the tab you were on before opened.",
-  "version": "0.3.1",
-  "manifest_version": 3,
-  "homepage_url": "https://github.com/ChromeAdmin/meetings-page-auto-closer-for-zoom",
+  "name": "Launch Page Auto Closer",
+  "description": "Automatically closes the page opened by Asana/Slack/Zoom to launch meetings and restores focus to the tab you were on before opened.",
+  "version": "0.0.1",
+  "manifest_version": 1,
   "icons": {
     "16": "icons/icon-128.png",
     "48": "icons/icon-128.png",
