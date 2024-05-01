@@ -14,7 +14,7 @@ const cssClassName_SettingsOption = `meetings-page-auto-closer-for-zoom-settings
 const localStorageKey_CountdownStartTimeMs = `b9d55053-5a15-4b65-98ce-73711e1d83f9`;
 
 function log(text) {
-  console.log(`MPACFZ: ${text}`);
+  console.log(`LPAC: ${text}`);
 }
 
 log('loaded...');
@@ -130,66 +130,9 @@ function injectAndUpdateSettingsMenu() {
   wrapperEl.appendChild(settingsEl);
 }
 
-function getUrl() {
-  return new URL(window.location.href);
-}
-
-function isWebClientLeave() {
-  const url = getUrl();
-  if (url.pathname && url.pathname.startsWith('/wc/leave')) {
-    return true;
-  } else {
-    return false;
-  }
-}
-
-function isPostAttendee() {
-  const url = getUrl();
-  if (url.pathname && url.pathname.startsWith('/postattendee')) {
-    return true;
-  } else {
-    return false;
-  }
-}
-
-function isMeetingStatusSuccess() {
-  if (window.location.href.toLowerCase().includes('success')) {
-    return true;
-  }
-
-  return false;
-}
-
-function isPageTextLikeMeetingLaunch() {
-  const pageText = document?.body?.innerText?.toLowerCase() || '';
-  if (pageText.includes('click open zoom.')) {
-    return true;
-  }
-  if (pageText.includes('click launch meeting below')) {
-    return true;
-  }
-  if (pageText.includes('having issues with zoom')) {
-    return true;
-  }
-  if (pageText.includes('meeting has been launched')) {
-    return true;
-  }
-  if (pageText.includes('having issues with zoom')) {
-    return true;
-  }
-  return false;
-}
-
 function countDownToClose() {
   timeTillCloseMs -= intervalRateMs;
-  log(`TimeMs left: ${timeTillCloseMs} isPageText=${isPageTextLikeMeetingLaunch()} isSuccess=${isMeetingStatusSuccess()} isPostAttendee=${isPostAttendee()} isWebClientLeave=${isWebClientLeave()}`);
-
-  if (isPageTextLikeMeetingLaunch() || isMeetingStatusSuccess() || isPostAttendee() || isWebClientLeave()) {
-    log(`All checks good to auto close`);
-  } else {
-    timeTillCloseMs += intervalRateMs; // Put back the time
-    return;
-  }
+  log(`TimeMs left: ${timeTillCloseMs});
 
   countdownWithText(timeTillCloseMs);
 
