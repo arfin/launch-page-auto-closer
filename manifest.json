@@ -16,7 +16,9 @@
     {
       "run_at": "document_start",
       "matches": [
-        "*://*.zoom.us/*"
+        "*://*.zoom.us/*",
+        "*://*.asana.com/*",
+        "*://*.slack.com/*"
       ],
       "js": [
         "src/content.js"
