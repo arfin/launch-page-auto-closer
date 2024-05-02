@@ -132,7 +132,7 @@ function injectAndUpdateSettingsMenu() {
 
 function countDownToClose() {
   timeTillCloseMs -= intervalRateMs;
-  log(`TimeMs left: ${timeTillCloseMs});
+  log(`TimeMs left: ${timeTillCloseMs}`);
 
   countdownWithText(timeTillCloseMs);
 
