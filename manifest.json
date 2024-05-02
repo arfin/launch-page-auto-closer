@@ -16,7 +16,7 @@
     {
       "run_at": "document_start",
       "matches": [
-        "*://*.zoom.us/*",
+        "*://*.zoom.us/*"
       ],
       "js": [
         "src/content.js"
