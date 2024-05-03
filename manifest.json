@@ -17,7 +17,7 @@
       "run_at": "document_start",
       "matches": [
         "*://*.zoom.us/*",
-        "*://*.asana.com/*",
+        "*://app.asana.com/-/desktop_app_link*",
         "*://*.slack.com/*"
       ],
       "js": [
