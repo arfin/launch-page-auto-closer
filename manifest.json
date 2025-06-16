@@ -16,7 +16,11 @@
     {
       "run_at": "document_start",
       "matches": [
-        "*://*.zoom.us/*",
+        "*://*.zoom.us/j/*",
+        "*://*.zoom.us/s/*",
+        "*://*.zoom.us/wc/*",
+        "*://*.zoom.us/my/*",
+        "*://*.zoom.us/w/*",
         "*://app.asana.com/-/desktop_app_link*",
         "*://*.slack.com/*"
       ],
